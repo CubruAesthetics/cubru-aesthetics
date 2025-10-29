@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CuBru Aesthetics - Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand"><img src="assets/logo.png" alt="logo"><h1>CuBru <span style="display:block;font-size:12px;color:#ddd">Aesthetics & Wellness</span></h1></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="book.html">Book Appointment</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section>
+      <h3 class="fade">Book Appointment</h3>
+      <div class="card" style="padding:18px">
+        <form id="bookingFormMain">
+          <div>
+            <label>Full name *</label>
+            <input name="name" required placeholder="Jane Doe">
+          </div>
+          <div style="margin-top:10px">
+            <label>Phone (SMS) *</label>
+            <input name="phone" required placeholder="+1 305 202 2754">
+          </div>
+          <div style="margin-top:10px">
+            <label>Service *</label>
+            <select name="service" required>
+              <option value="Botox (per unit)">Botox — $10 per unit</option>
+              <option value="Lips (fillers)">Lips — $650</option>
+              <option value="Trizep Month 1">Trizepitide — Month 1 ($250)</option>
+              <option value="Trizep Month 2">Trizepitide — Month 2 ($300)</option>
+              <option value="Trizep Month 3">Trizepitide — Month 3 ($350)</option>
+              <option value="Semi Month 1">Semiglutide — Month 1 ($180)</option>
+              <option value="Semi Month 2">Semiglutide — Month 2 ($225)</option>
+              <option value="Semi Month 3">Semiglutide — Month 3 ($275)</option>
+              <option value="IV Immunity">Immunity IV — $150</option>
+              <option value="IV Recovery">Recovery & Performance IV — $165</option>
+              <option value="IV Hangover">Hangover IV — $150</option>
+              <option value="NAD+ 500mg">NAD+ 500 mg IV — $400</option>
+              <option value="Microneedling">Microneedling — $200</option>
+              <option value="Microneedling PRP">Microneedling + PRP — $350</option>
+            </select>
+          </div>
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <div style="flex:1">
+              <label>Date *</label>
+              <input type="date" name="date" required>
+            </div>
+            <div style="flex:1">
+              <label>Time *</label>
+              <input type="time" name="time" required>
+            </div>
+          </div>
+          <div style="margin-top:10px">
+            <label>Notes</label>
+            <textarea name="notes" rows="3" placeholder="Allergies, prior treatments..."></textarea>
+          </div>
+          <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+            <button class="btn" type="submit">Confirm Booking</button>
+            <button type="button" class="btn secondary" onclick="document.getElementById('bookingFormMain').reset();">Clear</button>
+          </div>
+          <div id="bookingMsgMain" style="margin-top:12px;color:var(--muted)"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><div>© 2025 CuBru Aesthetics & Wellness</div></footer>
+<script src="script.js"></script>
+<script>initBookingForm('bookingFormMain','bookingMsgMain');</script>
+</body>
+</html>

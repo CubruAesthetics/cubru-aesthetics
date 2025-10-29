@@ -1,0 +1,35 @@
+
+:root{--bg:#070707;--gold:#cfa243;--gold-dark:#b8892e;--muted:#cfcfcf}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#050505,#0b0b0b);color:#eee;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none}
+header{position:sticky;top:0;background:rgba(0,0,0,0.45);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,0.03);z-index:50}
+.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:48px;width:48px;object-fit:contain;border-radius:8px}
+.brand h1{font-size:18px;margin:0}
+nav a{margin-left:18px;font-size:15px;color:#ddd}
+nav a:hover{color:var(--gold)}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.hero{display:flex;gap:24px;align-items:center}
+.hero-left{flex:1}
+.hero h2{font-size:32px;margin:0 0 12px 0;color:var(--gold)}
+.hero p{margin:0 0 18px 0;color:#cfcfcf}
+.btn{background:linear-gradient(90deg,var(--gold),var(--gold-dark));color:#070707;padding:12px 18px;border-radius:8px;font-weight:700;border:none;cursor:pointer}
+.btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#eee}
+.card{background:rgba(255,255,255,0.02);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition:transform .28s,box-shadow .28s}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.6)}
+h3{color:var(--gold);margin-top:0}
+.muted{color:var(--muted);font-size:14px}
+form input, form select, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:#fff;margin-top:6px}
+form label{font-size:14px;color:#ddd}
+footer{max-width:1100px;margin:36px auto;padding:20px;color:#bbb;border-top:1px solid rgba(255,255,255,0.03);text-align:center}
+.fade {opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+.fade.show{opacity:1;transform:none}
+@media (max-width:800px){.hero{flex-direction:column}.hero-right img{width:100%;height:220px}}
+.nav-links{display:flex;gap:16px;align-items:center}
+.mobile-toggle{display:none}
+@media (max-width:700px){
+  .nav-links{display:none}
+  .mobile-toggle{display:block}
+}
